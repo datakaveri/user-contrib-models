@@ -1,0 +1,224 @@
+{
+	"@context": "https://voc.iudx.org.in/",
+	"type": ["iudx:DataDescriptor", "iudx:EnvAQM"],
+	"name": "env_aqm_iiith",
+	"description": "Data Descriptor for data from AQM sensors in IIIT Hyderabad.",
+	"pm2p5": {
+		"type": ["TimeSeriesAggregation"],
+		"description": "Describes instantaneous and/or aggregated values for particulate matter 2.5(PM2.5). Aggregations of PM2.5 are derived over the last 24 hours",
+		"instValue": {
+			"type": ["ValueDescriptor"],
+			"description": "Instantaneous value of PM2.5 for the last 24 hours",
+			"dataSchema": "iudx:Number",
+			"unitCode": "XGQ",
+			"unitText": "micro gram per cubic metre (ug/m3)",
+			"measAccuracy": {
+				"minValue": -10,
+				"maxValue": 10
+			},
+			"resolution": 0.1
+		},
+		"avgOverTime": {
+			"type": ["ValueDescriptor"],
+			"description": "Average value of PM2.5 for the last 24 hours",
+			"dataSchema": "iudx:Number",
+			"aggregationDuration": 24,
+			"unitCode": "XGQ",
+			"unitText": "micro gram per cubic metre (ug/m3)"
+		}
+	},
+	"pm10": {
+		"type": ["TimeSeriesAggregation"],
+		"description": "Describes instantaneous and/or aggregated values for particulate matter 10(PM10). Aggregations of PM10 are derived over the last 24 hours",
+		"instValue": {
+			"type": ["ValueDescriptor"],
+			"description": "Instantaneous value of PM10 for the last 24 hours",
+			"dataSchema": "iudx:Number",
+			"unitCode": "XGQ",
+			"unitText": "micro gram per cubic metre (ug/m3)",
+			"measAccuracy": {
+				"minValue": -10,
+				"maxValue": 10
+			},
+			"resolution": 0.1
+		},
+		"avgOverTime": {
+			"type": ["ValueDescriptor"],
+			"description": "Average value of PM10 for the last 24 hours",
+			"dataSchema": "iudx:Number",
+			"aggregationDuration": 24,
+			"unitCode": "XGQ",
+			"unitText": "micro gram per cubic metre (ug/m3)"
+		}
+	},
+	"airTemperature": {
+		"type": ["TimeSeriesAggregation"],
+		"description": "Describes instantaneous and/or aggregated values for air temperature. Aggregations of temperature are derived over the last 24 hours",
+		"instValue": {
+			"type": ["ValueDescriptor"],
+			"description": "Instantaneous value of PM10 for the last 24 hours",
+			"dataSchema": "iudx:Number",
+			"unitCode": "CEL",
+			"unitText": "degree Celsius",
+			"measAccuracy": {
+				"minValue": -0.5,
+				"maxValue": 0.5
+			},
+			"resolution": 0.1
+		},
+		"avgOverTime": {
+			"type": ["ValueDescriptor"],
+			"description": "Average value of PM10 for the last 24 hours",
+			"dataSchema": "iudx:Number",
+			"aggregationDuration": 24,
+			"unitCode": "CEL",
+			"unitText": "degree Celsius"
+		}
+	},
+	"relativeHumidity": {
+		"type": ["ValueDescriptor"],
+		"description": "Instantaneous relative humidity (water vapour in air).",
+		"unitCode": "XP1",
+		"unitText": "percent",
+		"dataSchema": "iudx:Number",
+		"measAccuracy": {
+			"minValue": -2,
+			"maxValue": 2
+		},
+		"resolution": 0.1
+	},
+	"airQualityIndex": {
+		"type": ["ValueDescriptor"],
+		"description": "Overall AQI",
+		"unitCode": "C62",
+		"unitText": "dimensionless",
+		"dataSchema": "iudx:Number"
+	},
+	"airQualityLevel": {
+		"type": ["ValueDescriptor"],
+		"description": "Air Quality Category Indication. Qualitative level defined according to the local health agencies. For example, 'GOOD', 'MODERATE', 'POOR', 'UNHEALTHY', 'SEVERE', 'HAZARDOUS' etc.",
+		"dataSchema": "iudx:Text"
+	},
+	"aqiMajorPollutant": {
+		"type": ["ValueDescriptor"],
+		"description": "Major pollutant in the Air Quality Index (AQI).",
+		"dataSchema": "iudx:Text"
+	},
+	"observationDateTime": {
+		"type": ["ValueDescriptor"],
+		"description": "Last reported time of observation.",
+		"dataSchema": "iudx:DateTime"
+	},
+	"co": {
+		"type": ["TimeSeriesAggregation"],
+		"description": "Describes instantaneous and/or aggregated values for carbon monooxide(CO). Aggregations of CO are derived over the last 24 hours",
+		"instValue": {
+			"type": ["ValueDescriptor"],
+			"description": "Instantaneous value of CO for the last 24 hours",
+			"dataSchema": "iudx:Number",
+			"unitCode": "X59",
+			"unitText": "part per million (ppm)",
+			"resolution": 0.01
+		},
+		"avgOverTime": {
+			"type": ["ValueDescriptor"],
+			"description": "Average value of CO for the last 24 hours",
+			"dataSchema": "iudx:Number",
+			"aggregationDuration": 24,
+			"unitCode": "X59",
+			"unitText": "part per million (ppm)"
+		}
+	},
+	"no2": {
+		"type": ["TimeSeriesAggregation"],
+		"description": "Describes instantaneous and/or aggregated values for nitrogen dioxide(NO2). Aggregations of NO2 are derived over the last 24 hours",
+		"instValue": {
+			"type": ["ValueDescriptor"],
+			"description": "Instantaneous value of NO2 for the last 24 hours",
+			"dataSchema": "iudx:Number",
+			"unitCode": "X59",
+			"unitText": "part per million (ppm)",
+			"resolution": 0.01
+		},
+		"avgOverTime": {
+			"type": ["ValueDescriptor"],
+			"description": "Average value of NO2 for the last 24 hours",
+			"dataSchema": "iudx:Number",
+			"aggregationDuration": 24,
+			"unitCode": "X59",
+			"unitText": "part per million (ppm)"
+		}
+	},
+	"nh3": {
+		"type": ["TimeSeriesAggregation"],
+		"description": "Describes instantaneous and/or aggregated values for amonia(NH3). Aggregations of NH3 are derived over the last 24 hours",
+		"instValue": {
+			"type": ["ValueDescriptor"],
+			"description": "Instantaneous value of NH3 for the last 24 hours",
+			"dataSchema": "iudx:Number",
+			"unitCode": "X59",
+			"unitText": "part per million (ppm)",
+			"resolution": 0.01
+		},
+		"avgOverTime": {
+			"type": ["ValueDescriptor"],
+			"description": "Average value of NH3 for the last 24 hours",
+			"dataSchema": "iudx:Number",
+			"aggregationDuration": 24,
+			"unitCode": "X59",
+			"unitText": "part per million (ppm)"
+		}
+	},
+	"co2": {
+		"type": ["TimeSeriesAggregation"],
+		"description": "Describes instantaneous and/or aggregated values for carban dioxide(CO2). Aggregations of CO2 are derived over the last 24 hours",
+		"instValue": {
+			"type": ["ValueDescriptor"],
+			"description": "Instantaneous value of CO2 for the last 24 hours",
+			"dataSchema": "iudx:Number",
+			"unitCode": "X59",
+			"unitText": "part per million (ppm)",
+			"measAccuracy": {
+				"minValue": -30,
+				"maxValue": 30
+			},
+			"resolution": 1
+		},
+		"avgOverTime": {
+			"type": ["ValueDescriptor"],
+			"description": "Average value of CO2 for the last 24 hours",
+			"dataSchema": "iudx:Number",
+			"aggregationDuration": 24,
+			"unitCode": "X59",
+			"unitText": "part per million (ppm)"
+		}
+	},
+	"so2": {
+		"type": ["TimeSeriesAggregation"],
+		"description": "Describes instantaneous and/or aggregated values for sulphur dioxide(SO2). Aggregations of SO2 are derived over the last 24 hours",
+		"instValue": {
+			"type": ["ValueDescriptor"],
+			"description": "Instantaneous value of SO2 for the last 24 hours",
+			"dataSchema": "iudx:Number",
+			"unitCode": "X59",
+			"unitText": "part per million (ppm)",
+			"measAccuracy": {
+				"type": ["ValueDescriptor"],
+				"description": "Accuracy of a measurement.",
+				"minValue": -15,
+				"maxValue": 15,
+				"unitCode": "XP1",
+				"unitText": "percent"
+			},
+			"resolution": 0.05
+		},
+		"avgOverTime": {
+			"type": ["ValueDescriptor"],
+			"description": "Average value of SO2 for the last 24 hours",
+			"dataSchema": "iudx:Number",
+			"aggregationDuration": 24,
+			"unitCode": "X59",
+			"unitText": "part per million (ppm)"
+		}
+	}
+}
