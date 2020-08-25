@@ -1,0 +1,116 @@
+{
+	"@context": "https://voc.iudx.org.in/",
+	"type": ["iudx:DataDescriptor", "iudx:EnvWeather"],
+	"name": "env_weather_iiith",
+	"description": "Data Descriptor for data from weather sensors in IIIT Hyderabad.",
+	"observationDateTime": {
+		"type": ["ValueDescriptor"],
+		"description": "Last reported time of observation.",
+		"dataSchema": "iudx:DateTime"
+	},
+	"windDirection": {
+		"type": ["ValueDescriptor"],
+		"description": "Observed wind directiont. Measured in degrees clockwise from due north. ",
+		"dataSchema": "iudx:Number",
+		"unitCode": "DEG",
+		"unitText": "Decimal degrees",
+		"resolution": 1.4,
+		"measAccuracy": {
+			"minValue": -5,
+			"maxValue": 5
+		}
+
+	},
+	"windSpeed": {
+		"type": ["ValueDescriptor"],
+		"description": "Observed wind speed. ",
+		"dataSchema": "iudx:Number",
+		"unitCode": "MTS",
+		"unitText": "meters per second (m/s)",
+		"resolution": 0.19,
+		"measAccuracy": {
+			"minValue": -0.5,
+			"maxValue": 0.5
+		}
+	},
+	"gustSpeed": {
+		"type": ["ValueDescriptor"],
+		"description": "A sudden burst of high-speed wind over the observed average wind speed lasting  only for a few seconds.",
+		"dataSchema": "iudx:Number",
+		"unitCode": "MTS",
+		"unitText": "meters per second (m/s)",
+		"resolution": 0.19,
+		"measAccuracy": {
+			"minValue": -0.5,
+			"maxValue": 0.5
+		}
+	},
+	"airTemperature": {
+		"type": ["TimeSeriesAggregation"],
+		"description": "Describes instantaneous and/or aggregated values for air temperature. Aggregations of temperature are derived over the last 24 hours",
+		"instValue": {
+			"type": ["ValueDescriptor"],
+			"description": "Instantaneous value of PM10 for the last 24 hours",
+			"dataSchema": "iudx:Number",
+			"unitCode": "CEL",
+			"unitText": "degree Celsius",
+			"measAccuracy": {
+				"minValue": -0.21,
+				"maxValue": 0.21
+			},
+			"resolution": 0.02
+		},
+		"avgOverTime": {
+			"type": ["ValueDescriptor"],
+			"description": "Average value of PM10 for the last 24 hours",
+			"dataSchema": "iudx:Number",
+			"aggregationDuration": 24,
+			"unitCode": "CEL",
+			"unitText": "degree Celsius"
+		}
+	},
+	"relativeHumidity": {
+		"type": ["ValueDescriptor"],
+		"description": "Instantaneous relative humidity (water vapour in air).",
+		"dataSchema": "iudx:Number",
+		"unitCode": "XP1",
+		"unitText": "percent",
+		"measAccuracy": {
+			"minValue": -2.5,
+			"maxValue": 2.5
+		},
+		"resolution": 0.1
+	},
+	"solarRadiation": {
+		"type": ["ValueDescriptor"],
+		"description": "Observed solar radiation.",
+		"dataSchema": "iudx:Number",
+		"unitCode": "D54",
+		"unitText": "Watts per square meter",
+		"resolution": 1.25
+	},
+	"precipitation": {
+		"type": ["ValueDescriptor"],
+		"description": "Observed precipitation/rainfall level over a given duration. ",
+		"dataSchema": "iudx:Number",
+		"unitCode": "H67",
+		"unitText": "Millimetre Per Hour",
+		"resolution": 0.1
+	},
+	"atmosphericPressure": {
+		"type": ["ValueDescriptor"],
+		"description": "Observed air (atmospheric or barometric) pressure. ",
+		"dataSchema": "iudx:Number",
+		"unitCode": "XGQ",
+		"unitText": "micro gram per cubic metre (ug/m3)"
+	},
+	"dewPoint": {
+		"type": ["ValueDescriptor"],
+		"description": "Observed  temperature to which air must be cooled to become saturated with water vapor. ",
+		"dataSchema": "iudx:Number",
+		"unitCode": "CEL",
+		"unitText": "degree Celsius",
+		"resolution": 0.02
+	}
+
+}
