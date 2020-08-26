@@ -46,29 +46,17 @@
 		}
 	},
 	"airTemperature": {
-		"type": ["TimeSeriesAggregation"],
-		"description": "Describes instantaneous and/or aggregated values for air temperature. Aggregations of temperature are derived over the last 24 hours",
-		"instValue": {
-			"type": ["ValueDescriptor"],
-			"description": "Instantaneous value of PM10 for the last 24 hours",
-			"dataSchema": "iudx:Number",
-			"unitCode": "CEL",
-			"unitText": "degree Celsius",
-			"measAccuracy": {
-				"minValue": -0.21,
-				"maxValue": 0.21
-			},
-			"resolution": 0.02
-		},
-		"avgOverTime": {
-			"type": ["ValueDescriptor"],
-			"description": "Average value of PM10 for the last 24 hours",
-			"dataSchema": "iudx:Number",
-			"aggregationDuration": 24,
-			"unitCode": "CEL",
-			"unitText": "degree Celsius"
-		}
-	},
+        "type": ["ValueDescriptor"],
+        "description": "Describes instantaneous value for air temperature.",
+        "dataSchema": "iudx:Number",
+        "unitCode": "CEL",
+        "unitText": "degree Celsius",
+        "measAccuracy": {
+            "minValue": -0.21,
+            "maxValue": 0.21
+        },
+        "resolution": 0.02
+    },
 	"relativeHumidity": {
 		"type": ["ValueDescriptor"],
 		"description": "Instantaneous relative humidity (water vapour in air).",
@@ -91,7 +79,7 @@
 	},
 	"precipitation": {
 		"type": ["ValueDescriptor"],
-		"description": "Observed precipitation/rainfall level over a given duration. ",
+		"description": "Observed precipitation/rainfall level over a given duration.",
 		"dataSchema": "iudx:Number",
 		"unitCode": "H67",
 		"unitText": "Millimetre Per Hour",
@@ -99,7 +87,7 @@
 	},
 	"atmosphericPressure": {
 		"type": ["ValueDescriptor"],
-		"description": "Observed air (atmospheric or barometric) pressure. ",
+		"description": "Observed air (atmospheric or barometric) pressure.",
 		"dataSchema": "iudx:Number",
 		"unitCode": "XGQ",
 		"unitText": "micro gram per cubic metre (ug/m3)"
