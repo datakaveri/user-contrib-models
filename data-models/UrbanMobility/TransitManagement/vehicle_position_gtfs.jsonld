@@ -1,0 +1,79 @@
+{
+	"@context": [{
+		"iudx": "https://voc.iudx.org.in/",
+		"id": "https:/voc.iudx.org.in/enity_id",
+		"vehicle": "https:/voc.iudx.org.in/VehiclePosition"
+	}],
+	"type": ["iudx:DataDescriptor", "iudx:TransitManagement", "FeedEntity"],
+    "name": "gtfs_vehicle_position_surat"
+	"description": "Data Descriptor for data from Surat public transportation buses.",
+	"id": {
+		"type": ["ValueDescriptor"],
+		"dataSchema": "iudx:Text"
+	},
+	"vehicle": {
+		"@context": {
+			"vehicle": "https:/voc.iudx.org.in/vehicleDesc"
+		},
+		"type": ["VehiclePosition"],
+		"trip": {
+			"type": ["TripDescriptor"],
+			"trip_id": {
+
+				"type": ["ValueDescriptor"],
+				"dataSchema": "iudx:Text"
+			},
+
+			"route_id": {
+				"type": ["ValueDescriptor"],
+				"dataSchema": "iudx:Text"
+			},
+
+			"start_time": {
+				"type": ["ValueDescriptor"],
+				"dataSchema": "iudx:Text"
+			},
+			"start_date": {
+				"type": ["ValueDescriptor"],
+				"dataSchema": "iudx:Text"
+			},
+			"schedule_relationship": {
+				"type": ["ValueDescriptor"],
+				"dataSchema": "iudx:Text"
+			}
+		},
+		"position": {
+			"type": ["GeoCoordinates"],
+			"latitude": {
+				"type": ["ValueDescriptor"],
+				"dataSchema": "iudx:Number"
+			},
+			"longitude": {
+				"type": ["ValueDescriptor"],
+				"dataSchema": "iudx:Number"
+			}
+		},
+		"timestamp": {
+			"type": ["ValueDescriptor"],
+			"dataSchema": "iudx:DateTime"
+		},
+		"vehicle": {
+			"@context": {
+				"id": "https:/voc.iudx.org.in/vehicle_id"
+			},
+			"type": ["VehicleDescriptor"],
+			"id": {
+				"type": ["ValueDescriptor"],
+				"dataSchema": "iudx:Text"
+			},
+			"label": {
+				"type": ["ValueDescriptor"],
+				"dataSchema": "iudx:Text"
+			},
+			"license_plate": {
+				"type": ["ValueDescriptor"],
+				"dataSchema": "iudx:Text"
+			}
+		}
+	}
+}
