@@ -1,6 +1,6 @@
 {
 	"@context": "https://voc.iudx.org.in/",
-	"type": ["iudx:DataDescriptor", "iudx:EnvAQM"],
+	"type": ["iudx:EnvAQM"],
 	"id": "env_aqm_iiith",
 	"name": "env_aqm_iiith",
 	"description": "Data Descriptor for data from AQM sensors in IIIT Hyderabad.",

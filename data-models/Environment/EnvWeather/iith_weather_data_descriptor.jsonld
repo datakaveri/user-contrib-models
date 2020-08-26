@@ -1,6 +1,6 @@
 {
 	"@context": "https://voc.iudx.org.in/",
-	"type": ["iudx:DataDescriptor", "iudx:EnvWeather"],
+	"type": ["iudx:EnvWeather"],
 	"name": "env_weather_iiith",
 	"description": "Data Descriptor for data from weather sensors in IIIT Hyderabad.",
 	"observationDateTime": {
